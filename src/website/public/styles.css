@@ -46,11 +46,24 @@ button {
   position: relative;
   z-index: 5;
   width: 100%;
-  border-top: 3px solid #c9963b;
+  border-top: 0;
   background-color: #f7f3eb;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23b88b3a' stroke-width='1' stroke-opacity='0.05'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3Ccircle cx='30' cy='30' r='12'/%3E%3C/g%3E%3C/svg%3E");
 }
 
+.site-header::before {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 5px;
+  background-color: #efe8da;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='5' viewBox='0 0 20 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d=''M0 5 L5 0 L10 5 L15 0 L20 5 Z'' fill=''%23c9963b'' fill-opacity=''0.55''/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  content: "";
+  pointer-events: none;
+}
 .site-header::after {
   position: absolute;
   z-index: 3;
