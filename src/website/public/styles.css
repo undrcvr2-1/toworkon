@@ -540,6 +540,11 @@ width: min(1160px, calc(100% - 72px));
 .zarad-story-section {
   position: relative;
   isolation: isolate;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 72px max(36px, calc((100% - 1160px) / 2));
   background-color: #f3eadb;
   background-image:
     radial-gradient(circle at 72% 50%, rgba(255, 250, 240, 0.75) 0%, transparent 60%),
@@ -549,11 +554,11 @@ width: min(1160px, calc(100% - 72px));
 .zarad-story-section::before {
   content: "";
   position: absolute;
-  left: -60px;
+  left: clamp(18px, 6vw, 96px);
   top: 50%;
   transform: translateY(-50%);
-  width: 460px;
-  height: 460px;
+  width: 430px;
+  height: 430px;
   background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%239e6b24' stroke-width='0.9' stroke-opacity='0.07'%3E%3Ccircle cx='100' cy='100' r='92'/%3E%3Ccircle cx='100' cy='100' r='78' stroke-dasharray='3 3'/%3E%3Crect x='36' y='36' width='128' height='128' transform='rotate(0 100 100)'/%3E%3Crect x='36' y='36' width='128' height='128' transform='rotate(45 100 100)'/%3E%3Crect x='52' y='52' width='96' height='96' transform='rotate(22.5 100 100)'/%3E%3Crect x='52' y='52' width='96' height='96' transform='rotate(67.5 100 100)'/%3E%3Ccircle cx='100' cy='100' r='26'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain;
   pointer-events: none;
   z-index: 0;
@@ -1138,7 +1143,7 @@ width: calc(100% - 44px);
 }
 
 .welcome-image.moroccan-arch-frame img {
-  height: 400px;
+  height: 380px;
   border: 1px solid rgba(201, 150, 59, 0.45);
   border-radius: 235px 235px 4px 4px;
   object-fit: cover;
@@ -1166,6 +1171,16 @@ width: calc(100% - 44px);
 }
 
 @media (max-width: 768px) {
+  .zarad-story-section {
+    padding: 77px 22px 82px;
+  }
+
+  .zarad-story-section::before {
+    left: -72px;
+    width: 340px;
+    height: 340px;
+  }
+
   .welcome-image.moroccan-arch-frame {
     margin-right: 14px;
   }
