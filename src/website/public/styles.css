@@ -1330,10 +1330,10 @@ width: calc(100% - 44px);
   align-items: center;
   gap: 12px;
   padding: 15px 34px;
-  background-color: #f6eedc;
-  color: #2c3b2e;
+  background-color: #751e27;
+  color: #fff4e3;
   border: 1.5px solid #d4a443;
-  box-shadow: 0 10px 26px rgba(15, 22, 16, 0.28), inset 0 0 0 3px #f6eedc, inset 0 0 0 4px rgba(201, 150, 59, 0.5);
+  box-shadow: 0 10px 26px rgba(15, 22, 16, 0.28), inset 0 0 0 3px #751e27, inset 0 0 0 4px rgba(201, 150, 59, 0.5);
   font-size: 13.5px;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -1341,10 +1341,10 @@ width: calc(100% - 44px);
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .zarad-cta-button:hover {
-  background-color: #e6be6a;
-  color: #1f2b20;
+  background-color: #8e2933;
+  color: #fffaf0;
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(15, 22, 16, 0.38), inset 0 0 0 3px #e6be6a, inset 0 0 0 4px rgba(44, 59, 46, 0.35);
+  box-shadow: 0 14px 32px rgba(15, 22, 16, 0.38), inset 0 0 0 3px #8e2933, inset 0 0 0 4px rgba(212, 164, 67, 0.5);
 }
 .zarad-cta-button .arrow { transition: transform 0.25s ease; }
 .zarad-cta-button:hover .arrow { transform: translate(3px, -2px); }
