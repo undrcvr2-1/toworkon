@@ -544,7 +544,7 @@ width: min(1160px, calc(100% - 72px));
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: 160px max(36px, calc((100% - 1700px) / 2));
+  padding: clamp(115px, 8.5vw, 160px) max(72px, calc((100% - 1700px) / 2));
   background: #f4ead9;
 }
 
@@ -568,7 +568,7 @@ width: min(1160px, calc(100% - 72px));
 
 .zarad-story-section .welcome-copy .section-kicker {
   margin-bottom: 28px;
-  font-size: 14px;
+  font-size: clamp(10px, 0.74vw, 14px);
   letter-spacing: 3px;
 }
 
@@ -594,21 +594,21 @@ width: min(1160px, calc(100% - 72px));
 
 .zarad-story-section .welcome-copy h2 {
   max-width: 720px;
-  font-size: clamp(44px, 5.3vw, 76px);
+  font-size: clamp(54px, 4vw, 76px);
   line-height: 1.16;
-  letter-spacing: -2px;
+  letter-spacing: -1.3px;
 }
 
 .zarad-story-section .welcome-copy > p:not(.section-kicker) {
   max-width: 700px;
-  margin-top: 34px;
-  font-size: 19px;
+  margin-top: 28px;
+  font-size: clamp(13.5px, 1vw, 19px);
   line-height: 1.95;
 }
 
 .zarad-story-section .text-link {
-  margin-top: 42px;
-  font-size: 16px;
+  margin-top: 34px;
+  font-size: clamp(12px, 0.85vw, 16px);
 }
 
 .text-link {
@@ -1156,7 +1156,7 @@ width: calc(100% - 44px);
 }
 
 .welcome-image.moroccan-arch-frame img {
-  height: 580px;
+  height: clamp(430px, 30.5vw, 580px);
   border: 1px solid rgba(201, 150, 59, 0.45);
   border-radius: 235px 235px 4px 4px;
   object-fit: cover;
