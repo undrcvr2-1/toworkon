@@ -528,7 +528,6 @@ button {
   }
 }
 .welcome-section {
-    position: relative;
 width: min(1160px, calc(100% - 72px));
   margin: 0 auto;
   padding: 112px 0 105px;
@@ -1147,17 +1146,7 @@ width: calc(100% - 44px);
   }
 }
 
-.welcome-section::after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 100vw;
-  height: 14px;
-  transform: translateX(-50%);
+.welcome-frieze {
   border-top: 1px solid rgba(201, 150, 59, 0.65);
   border-bottom: 1px solid rgba(201, 150, 59, 0.65);
-  background-color: #f4ede0;
-  background-image: url("data:image/svg+xml,%3Csvg width='28' height='14' viewBox='0 0 28 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%239e6b24' stroke-width='1' stroke-opacity='0.75'%3E%3Cpath d='M0 7 L7 0 L14 7 L7 14 Z M14 7 L21 0 L28 7 L21 14 Z'/%3E%3Ccircle cx='7' cy='7' r='1.8' fill='%23c9963b' fill-opacity='0.5'/%3E%3Ccircle cx='21' cy='7' r='1.8' fill='%23c9963b' fill-opacity='0.5'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  content: "";
 }
