@@ -23,12 +23,14 @@ function setLanguage(language) {
   });
 
   if (languageButton) {
-    languageButton.textContent = language === "ro" ? "EN" : "RO";
+    const isEnglish = language === "en";
+    languageButton.classList.toggle("is-en", isEnglish);
+    languageButton.classList.toggle("is-ro", !isEnglish);
     languageButton.setAttribute(
       "aria-label",
-      language === "ro" ? "Switch to English" : "Schimbă limba în română"
+      isEnglish ? "Schimbă limba în română" : "Switch to English"
     );
-    languageButton.title = language === "ro" ? "English" : "Română";
+    languageButton.title = isEnglish ? "Română" : "English";
   }
 
   try {

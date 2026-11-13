@@ -84,8 +84,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-self: start;
-  background: radial-gradient(circle, #f7f3eb 65%, transparent 100%);
-  border-radius: 8px;
+  background: transparent;
 }
 
 .brand img {
@@ -101,6 +100,7 @@ button {
   align-items: center;
   justify-self: center;
   gap: 36px;
+  z-index: 2;
 }
 
 .nav-link {
@@ -114,7 +114,7 @@ button {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--wine);
+  color: #7c2d23;
 }
 
 .nav-link.active::after {
@@ -127,30 +127,74 @@ button {
   content: "";
 }
 
-.language-toggle {
-  width: auto;
-  min-width: 38px;
-  height: auto;
-  min-height: 28px;
-  padding: 4px 14px;
+.zarad-right {
   justify-self: end;
-  border: 1px solid #c9963b;
-  border-radius: 999px;
-  background-color: #efe8da;
-  color: #4a3b2c;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  z-index: 2;
 }
 
-.language-toggle:hover,
-.language-toggle:focus-visible {
-  border-color: #c9963b;
-  background-color: #c9963b;
-  color: #ffffff;
-  outline: none;
+.zarad-lang-pill {
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: center;
+  width: 86px;
+  height: 30px;
+  padding: 3px;
+  border: 1.5px solid #c9963b;
+  border-radius: 999px;
+  background-color: #f7f3eb;
+  box-shadow: 0 2px 6px rgba(74, 59, 44, 0.06);
+  cursor: pointer;
+  user-select: none;
+}
+
+.zarad-lang-slider {
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  width: calc(50% - 4px);
+  border-radius: 999px;
+  background-color: #7c2d23;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.zarad-lang-pill.is-en .zarad-lang-slider {
+  transform: translateX(calc(100% + 4px));
+}
+
+.zarad-lang-divider {
+  z-index: 2;
+  width: 1px;
+  height: 13px;
+  background-color: rgba(201, 150, 59, 0.55);
+}
+
+.zarad-lang-label {
+  position: relative;
+  z-index: 2;
+  color: #5a2e22;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  transition: color 0.25s ease;
+}
+
+.zarad-lang-pill.is-ro .label-ro,
+.zarad-lang-pill.is-en .label-en {
+  color: #f7f3eb;
+}
+
+.zarad-lang-pill:focus-visible {
+  outline: 2px solid #5a2e22;
+  outline-offset: 3px;
+}
+
+.zarad-lang-pill:hover {
+  box-shadow: 0 3px 9px rgba(74, 59, 44, 0.12);
 }
 
 .hero {
@@ -767,6 +811,16 @@ button {
   }
 }
 
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 10px 20px 14px;
+  }
+
+  .main-nav {
+    gap: 20px;
+  }
+}
+
 @media (max-width: 680px) {
   .header-inner {
     width: 100%;
@@ -787,7 +841,7 @@ button {
     gap: 10px;
   }
 
-  .language-toggle {
+  .zarad-right {
     grid-area: toggle;
   }
 
@@ -796,8 +850,8 @@ button {
     font-size: 10px;
   }
 
-  .language-toggle {
-    margin-left: auto;
+  .zarad-right {
+    margin-left: 0;
   }
 
   .hero {

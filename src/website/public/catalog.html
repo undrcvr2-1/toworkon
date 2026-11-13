@@ -7,23 +7,30 @@
   <meta name="description" content="Catalogul Zarad — selecție de condimente inspirate de Maroc.">
   <title>Catalog — Zarad</title>
   <link rel="icon" type="image/png" href="/assets/Zarad-logo.png">
-  <link rel="stylesheet" href="/styles.css?v=compact-header-20261113">
-  <script src="/app.js" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=language-pill-20261113">
+  <script src="/app.js?v=language-pill-20261113" defer></script>
 </head>
 <body class="catalog-page">
-  <header class="site-header">
+  <header class="site-header zarad-header">
     <div class="header-inner">
-      <a class="brand" href="/" aria-label="Zarad — One Spice Away">
+      <a class="brand zarad-logo" href="/" aria-label="Zarad — One Spice Away">
         <img id="zarad_logo" src="/assets/Zarad-logo.png" alt="Zarad — One Spice Away">
       </a>
 
-      <nav class="main-nav" aria-label="Navigare principală">
+      <nav class="main-nav zarad-nav" aria-label="Navigare principală">
         <a class="nav-link" href="/" data-ro="Acasă" data-en="Home">Acasă</a>
         <a class="nav-link active" href="/catalog" aria-current="page" data-ro="Catalog" data-en="Catalogue">Catalog</a>
         <a class="nav-link" href="/#contact" data-ro="Contact" data-en="Contact">Contact</a>
       </nav>
 
-      <button class="language-toggle" id="zarad_language" type="button" aria-label="Switch to English" title="English">EN</button>
+      <div class="zarad-right">
+        <button class="language-toggle zarad-lang-pill is-ro" id="zarad_language" type="button" aria-label="Switch to English" title="English">
+          <span class="zarad-lang-slider" aria-hidden="true"></span>
+          <span class="zarad-lang-label label-ro" aria-hidden="true">RO</span>
+          <span class="zarad-lang-divider" aria-hidden="true"></span>
+          <span class="zarad-lang-label label-en" aria-hidden="true">EN</span>
+        </button>
+      </div>
     </div>
   </header>
 
