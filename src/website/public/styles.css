@@ -1143,3 +1143,209 @@ button {
     border-radius: 130px 130px 10px 10px;
   }
 }
+/* Premium catalogue presentation */
+.zarad-cat-hero {
+  padding: 56px 24px 42px;
+  border-bottom: 1px solid rgba(201, 150, 59, 0.45);
+  background: #f3eadb;
+  text-align: center;
+}
+
+.zarad-cat-hero .section-kicker {
+  margin-bottom: 12px;
+  color: #a46b30;
+}
+
+.zarad-cat-hero h1 {
+  color: #5b1f18;
+  font-size: clamp(42px, 5vw, 62px);
+}
+
+.zarad-cat-hero > p:last-of-type {
+  max-width: 650px;
+  margin: 16px auto 0;
+  color: #765f52;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.zarad-cat-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.zarad-filter-pill {
+  padding: 8px 18px;
+  border: 1px solid rgba(201, 150, 59, 0.7);
+  border-radius: 999px;
+  background: #faf7f0;
+  color: #5a2e22;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.zarad-filter-pill:hover {
+  transform: translateY(-1px);
+  border-color: #7c2d23;
+  color: #7c2d23;
+}
+
+.zarad-filter-pill.active {
+  border-color: #7c2d23;
+  background: #7c2d23;
+  color: #faf7f0;
+  box-shadow: 0 4px 12px rgba(124, 45, 35, 0.18);
+}
+
+.zarad-filter-pill:focus-visible {
+  outline: 2px solid #5a2e22;
+  outline-offset: 3px;
+}
+
+.catalog-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-grid.zarad-cat-grid {
+  display: grid;
+  width: 100%;
+  max-width: 1244px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  margin: 0 auto;
+  padding: 48px 32px 72px;
+}
+
+.catalog-card.zarad-cat-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 10px 10px 22px;
+  border: 1px solid rgba(201, 150, 59, 0.62);
+  border-radius: 150px 150px 10px 10px;
+  background: #faf7f0;
+  box-shadow: 0 10px 26px rgba(74, 59, 44, 0.06);
+  transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.catalog-card.zarad-cat-card:hover {
+  transform: translateY(-4px);
+  border-color: #c9963b;
+  box-shadow: 0 16px 30px rgba(90, 34, 24, 0.11);
+}
+
+.catalog-card.zarad-cat-card .catalog-card-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3.3;
+  margin-bottom: 17px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 150, 59, 0.4);
+  border-radius: 140px 140px 4px 4px;
+  background: #e5d2b9;
+}
+
+.catalog-card.zarad-cat-card .catalog-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.catalog-card.zarad-cat-card:hover .catalog-card-image img {
+  transform: scale(1.055);
+}
+
+.zarad-cat-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 4px 10px;
+  padding: 0 10px 10px;
+  border-bottom: 1px solid rgba(201, 150, 59, 0.25);
+}
+
+.zarad-cat-num {
+  color: #b58025;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.zarad-cat-note {
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #f2eadb;
+  color: #7c2d23;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.catalog-card.zarad-cat-card .catalog-card-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 14px;
+}
+
+.catalog-card.zarad-cat-card h2 {
+  margin: 0 0 8px;
+  color: #5b1f18;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.catalog-card.zarad-cat-card p {
+  flex: 1;
+  margin: 0;
+  color: #6e5d4f;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .catalog-grid.zarad-cat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .zarad-cat-hero {
+    padding: 54px 20px 34px;
+  }
+
+  .zarad-cat-filters {
+    gap: 8px;
+  }
+
+  .zarad-filter-pill {
+    padding: 8px 13px;
+    font-size: 11px;
+  }
+
+  .catalog-grid.zarad-cat-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    gap: 22px;
+    padding: 32px 22px 56px;
+  }
+
+  .catalog-card.zarad-cat-card .catalog-card-image {
+    aspect-ratio: 4 / 3;
+  }
+}

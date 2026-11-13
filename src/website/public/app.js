@@ -2,9 +2,11 @@ const languageButton = document.querySelector("#zarad_language");
 const currentYear = document.querySelector("#current-year");
 const catalogGrid = document.querySelector("#zarad_catalog");
 const catalogStatus = document.querySelector("#zarad_catalog_status");
+const catalogFilters = document.querySelector("#zarad_cat_filters");
 const slider = document.querySelector("#zarad_slider");
 
 let currentLanguage = "ro";
+let activeCatalogCategory = "all";
 
 if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
@@ -41,6 +43,16 @@ function setLanguage(language) {
   renderCatalog();
 }
 
+function getCategoryLabel(category) {
+  const labels = {
+    whole: { ro: "Mirodenii întregi", en: "Whole spices" },
+    ground: { ro: "Măcinate", en: "Ground spices" },
+    blends: { ro: "Amestecuri", en: "Blends" }
+  };
+
+  return (labels[category] || labels.blends)[currentLanguage];
+}
+
 function renderCatalog() {
   if (!catalogGrid || !Array.isArray(window.zaradCatalog)) {
     return;
@@ -49,11 +61,15 @@ function renderCatalog() {
   catalogGrid.replaceChildren();
 
   window.zaradCatalog.forEach((spice, index) => {
+    if (activeCatalogCategory !== "all" && spice.category !== activeCatalogCategory) {
+      return;
+    }
+
     const card = document.createElement("article");
-    card.className = "catalog-card";
+    card.className = "catalog-card zarad-cat-card";
 
     const imageFrame = document.createElement("div");
-    imageFrame.className = "catalog-card-image";
+    imageFrame.className = "catalog-card-image zarad-cat-img-wrap";
 
     const image = document.createElement("img");
     image.src = "/assets/" + spice.folder + "/" + spice.image;
@@ -63,11 +79,19 @@ function renderCatalog() {
     imageFrame.append(image);
 
     const details = document.createElement("div");
-    details.className = "catalog-card-details";
+    details.className = "catalog-card-details zarad-cat-body";
+
+    const meta = document.createElement("div");
+    meta.className = "zarad-cat-meta";
 
     const number = document.createElement("span");
-    number.className = "catalog-card-number";
+    number.className = "catalog-card-number zarad-cat-num";
     number.textContent = String(index + 1).padStart(2, "0");
+
+    const note = document.createElement("span");
+    note.className = "zarad-cat-note";
+    note.textContent = getCategoryLabel(spice.category);
+    meta.append(number, note);
 
     const heading = document.createElement("h2");
     heading.textContent = currentLanguage === "ro" ? spice.name : spice.name_en;
@@ -75,12 +99,11 @@ function renderCatalog() {
     const description = document.createElement("p");
     description.textContent = currentLanguage === "ro" ? spice.description : spice.description_en;
 
-    details.append(number, heading, description);
+    details.append(meta, heading, description);
     card.append(imageFrame, details);
     catalogGrid.append(card);
   });
 }
-
 async function loadCatalog() {
   if (!catalogGrid) {
     return;
@@ -182,6 +205,24 @@ function setupSlider() {
   restartTimer();
 }
 
+
+if (catalogFilters) {
+  catalogFilters.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-filter]");
+    if (!button) {
+      return;
+    }
+
+    activeCatalogCategory = button.dataset.filter;
+    catalogFilters.querySelectorAll("[data-filter]").forEach((filterButton) => {
+      const isActive = filterButton === button;
+      filterButton.classList.toggle("active", isActive);
+      filterButton.setAttribute("aria-pressed", String(isActive));
+    });
+
+    renderCatalog();
+  });
+}
 let savedLanguage = "ro";
 
 try {
