@@ -544,7 +544,7 @@ width: min(1160px, calc(100% - 72px));
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: clamp(115px, 8.5vw, 160px) max(72px, calc((100% - 1700px) / 2));
+  padding: clamp(115px, 8.5vw, 160px) max(72px, calc((100% - 1700px) / 2)) clamp(95px, 6.3vw, 120px);
   background: #f4ead9;
 }
 
