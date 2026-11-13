@@ -1258,8 +1258,8 @@ width: calc(100% - 44px);
 .zarad-cta-frame {
   position: relative;
   width: min(1060px, calc(100% - 44px));
-  margin: 14px auto;
-  padding: 30px 36px;
+  margin: 22px auto;
+  padding: 48px 36px;
   border: 1px solid rgba(212, 164, 67, 0.38);
   box-shadow: inset 0 0 0 5px rgba(52, 70, 54, 0.4), inset 0 0 0 6px rgba(212, 164, 67, 0.2);
   text-align: center;
@@ -1284,7 +1284,7 @@ width: calc(100% - 44px);
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  margin: 0 0 10px;
+  margin: 0 0 14px;
   color: #e6be6a;
   font-size: 11px;
   font-weight: 700;
@@ -1302,7 +1302,7 @@ width: calc(100% - 44px);
 
 .zarad-cta-heading {
   max-width: 640px;
-  margin: 0 auto 10px;
+  margin: 0 auto 14px;
   color: #faf7f0;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 38px;
@@ -1315,7 +1315,7 @@ width: calc(100% - 44px);
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 26px;
   color: #d4a443;
   font-size: 13px;
 }
@@ -1351,6 +1351,6 @@ width: calc(100% - 44px);
 .zarad-cta-button:focus-visible { outline: 2px solid #faf7f0; outline-offset: 4px; }
 
 @media (max-width: 768px) {
-  .zarad-cta-frame { margin: 12px auto; padding: 24px 20px; }
+  .zarad-cta-frame { margin: 16px auto; padding: 36px 20px; }
   .zarad-cta-heading { font-size: 28px; }
 }
