@@ -743,7 +743,12 @@ width: min(1160px, calc(100% - 72px));
   align-items: center;
   justify-content: space-between;
   gap: 35px;
-  background: var(--wine);
+  background-color: #344636;
+  background-image:
+    radial-gradient(circle at 25% 50%, rgba(69, 92, 71, 0.7) 0%, rgba(36, 49, 38, 0.9) 100%),
+    url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d4a443' stroke-width='0.9' stroke-opacity='0.09'%3E%3Cpath d='M22 0L44 22L22 44L0 22Z'/%3E%3Ccircle cx='22' cy='22' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  border-top: 2px solid #c9963b;
+  border-bottom: 2px solid #c9963b;
   color: #fff4e3;
 }
 
