@@ -1125,6 +1125,12 @@ width: calc(100% - 44px);
 
 .featured-spice.zarad-card img {
   border-radius: inherit;
+  transform: scale(0.96);
+  transition: transform 450ms ease;
+}
+
+.featured-spice.zarad-card:hover img {
+  transform: scale(0.98);
 }
 
 .featured-spice.zarad-card:focus-visible {
