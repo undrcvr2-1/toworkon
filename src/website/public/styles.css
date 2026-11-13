@@ -399,51 +399,158 @@ button {
   background: var(--gold-light);
 }
 
-.promise-strip {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 29px max(36px, calc((100% - 1140px) / 2));
-  border-bottom: 1px solid var(--line);
-  background: #fbf5eb;
+.zarad-features-wrapper {
+  position: relative;
+  z-index: 10;
+  padding: 0 24px 48px;
+  background-color: #f7f3eb;
 }
 
-.promise-item {
-  min-height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  border-right: 1px solid #e2c9a9;
+.zarad-plaque {
+  position: relative;
+  max-width: 1140px;
+  margin: -48px auto 0;
+  padding: 12px;
+  border: 2px solid #c9963b;
+  border-radius: 18px;
+  background-color: #faf7f0;
+  box-shadow: 0 18px 40px rgba(58, 38, 24, 0.12), 0 0 0 6px #faf7f0, 0 0 0 7.5px rgba(201, 150, 59, 0.45);
 }
 
-.promise-item:last-child {
-  border-right: 0;
-}
-
-.promise-icon {
-  color: var(--wine);
-  font-size: 27px;
-}
-
-.promise-item div {
+.zarad-plaque-inner {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  overflow: hidden;
+  border: 1.5px solid #c9963b;
+  border-radius: 10px;
+  background-color: #faf7f0;
 }
 
-.promise-item strong {
-  color: var(--wine);
-  font-family: "Playfair Display", Georgia, serif;
+.zarad-frieze-border {
+  width: 100%;
+  height: 18px;
+  flex: 0 0 18px;
+  background-color: #f4ede0;
+  background-image: url("data:image/svg+xml,%3Csvg width='36' height='18' viewBox='0 0 36 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%239e6b24' stroke-width='1.1' stroke-opacity='0.75'%3E%3Cpath d='M0 9 L9 0 L18 9 L9 18 Z M18 9 L27 0 L36 9 L27 18 Z'/%3E%3Cpath d='M9 0 L27 18 M27 0 L9 18' stroke-opacity='0.45'/%3E%3Ccircle cx='9' cy='9' r='2.2' fill='%23c9963b' fill-opacity='0.4'/%3E%3Ccircle cx='27' cy='9' r='2.2' fill='%23c9963b' fill-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.zarad-frieze-top {
+  border-bottom: 1.5px solid #c9963b;
+}
+
+.zarad-frieze-bottom {
+  border-top: 1.5px solid #c9963b;
+}
+
+.zarad-plaque-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  padding: 36px 24px;
+}
+
+.zarad-pillar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 28px;
+  text-align: center;
+}
+
+.zarad-pillar:not(:last-child)::before {
+  position: absolute;
+  top: 8%;
+  right: 0;
+  width: 2px;
+  height: 84%;
+  background: linear-gradient(to bottom, transparent 0%, #c9963b 38%, transparent 46%, transparent 54%, #c9963b 62%, transparent 100%);
+  content: "";
+}
+
+.zarad-pillar:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  color: #b58025;
+  font-size: 16px;
+  line-height: 1;
+  content: "✧";
+}
+
+.zarad-medallion {
+  position: relative;
+  display: flex;
+  width: 108px;
+  height: 108px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border: 1px solid rgba(201, 150, 59, 0.72);
+  border-radius: 50%;
+  background: radial-gradient(circle, #fffaf1 0 47%, #f4ede0 48% 100%);
+  box-shadow: inset 0 0 0 5px #faf7f0, inset 0 0 0 6px rgba(201, 150, 59, 0.42);
+  filter: drop-shadow(0 6px 12px rgba(90, 34, 24, 0.14));
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.zarad-medallion svg {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: #7c2d23;
+  stroke: #c9963b;
+  stroke-width: 1.5;
+}
+
+.zarad-pillar:hover .zarad-medallion {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.zarad-pillar h3 {
+  margin: 0 0 6px;
+  color: #5b1f18;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.zarad-pillar p {
+  margin: 0;
+  color: #6e5d4f;
   font-size: 14px;
-  font-weight: 600;
+  line-height: 1.4;
 }
 
-.promise-item div span {
-  color: var(--muted);
-  font-size: 10px;
-}
+@media (max-width: 860px) {
+  .zarad-features-wrapper {
+    padding: 0 18px 38px;
+  }
 
+  .zarad-plaque {
+    margin-top: -24px;
+  }
+
+  .zarad-plaque-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 32px 16px;
+  }
+
+  .zarad-pillar {
+    padding: 0 12px;
+  }
+
+  .zarad-pillar:not(:last-child)::before,
+  .zarad-pillar:not(:last-child)::after {
+    display: none;
+  }
+}
 .welcome-section {
   width: min(1160px, calc(100% - 72px));
   margin: 0 auto;
@@ -889,24 +996,159 @@ button {
     bottom: 65px;
   }
 
-  .promise-strip {
+  .zarad-features-wrapper {
+  position: relative;
+  z-index: 10;
+  padding: 0 24px 48px;
+  background-color: #f7f3eb;
+}
+
+.zarad-plaque {
+  position: relative;
+  max-width: 1140px;
+  margin: -48px auto 0;
+  padding: 12px;
+  border: 2px solid #c9963b;
+  border-radius: 18px;
+  background-color: #faf7f0;
+  box-shadow: 0 18px 40px rgba(58, 38, 24, 0.12), 0 0 0 6px #faf7f0, 0 0 0 7.5px rgba(201, 150, 59, 0.45);
+}
+
+.zarad-plaque-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1.5px solid #c9963b;
+  border-radius: 10px;
+  background-color: #faf7f0;
+}
+
+.zarad-frieze-border {
+  width: 100%;
+  height: 18px;
+  flex: 0 0 18px;
+  background-color: #f4ede0;
+  background-image: url("data:image/svg+xml,%3Csvg width='36' height='18' viewBox='0 0 36 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%239e6b24' stroke-width='1.1' stroke-opacity='0.75'%3E%3Cpath d='M0 9 L9 0 L18 9 L9 18 Z M18 9 L27 0 L36 9 L27 18 Z'/%3E%3Cpath d='M9 0 L27 18 M27 0 L9 18' stroke-opacity='0.45'/%3E%3Ccircle cx='9' cy='9' r='2.2' fill='%23c9963b' fill-opacity='0.4'/%3E%3Ccircle cx='27' cy='9' r='2.2' fill='%23c9963b' fill-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.zarad-frieze-top {
+  border-bottom: 1.5px solid #c9963b;
+}
+
+.zarad-frieze-bottom {
+  border-top: 1.5px solid #c9963b;
+}
+
+.zarad-plaque-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  padding: 36px 24px;
+}
+
+.zarad-pillar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 28px;
+  text-align: center;
+}
+
+.zarad-pillar:not(:last-child)::before {
+  position: absolute;
+  top: 8%;
+  right: 0;
+  width: 2px;
+  height: 84%;
+  background: linear-gradient(to bottom, transparent 0%, #c9963b 38%, transparent 46%, transparent 54%, #c9963b 62%, transparent 100%);
+  content: "";
+}
+
+.zarad-pillar:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  color: #b58025;
+  font-size: 16px;
+  line-height: 1;
+  content: "✧";
+}
+
+.zarad-medallion {
+  position: relative;
+  display: flex;
+  width: 108px;
+  height: 108px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border: 1px solid rgba(201, 150, 59, 0.72);
+  border-radius: 50%;
+  background: radial-gradient(circle, #fffaf1 0 47%, #f4ede0 48% 100%);
+  box-shadow: inset 0 0 0 5px #faf7f0, inset 0 0 0 6px rgba(201, 150, 59, 0.42);
+  filter: drop-shadow(0 6px 12px rgba(90, 34, 24, 0.14));
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.zarad-medallion svg {
+  display: block;
+  width: 40px;
+  height: 40px;
+  fill: #7c2d23;
+  stroke: #c9963b;
+  stroke-width: 1.5;
+}
+
+.zarad-pillar:hover .zarad-medallion {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.zarad-pillar h3 {
+  margin: 0 0 6px;
+  color: #5b1f18;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.zarad-pillar p {
+  margin: 0;
+  color: #6e5d4f;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+@media (max-width: 860px) {
+  .zarad-features-wrapper {
+    padding: 0 18px 38px;
+  }
+
+  .zarad-plaque {
+    margin-top: -24px;
+  }
+
+  .zarad-plaque-grid {
     grid-template-columns: 1fr;
-    gap: 0;
-    padding: 14px 25px;
+    gap: 36px;
+    padding: 32px 16px;
   }
 
-  .promise-item {
-    justify-content: flex-start;
-    min-height: 66px;
-    border-right: 0;
-    border-bottom: 1px solid #e2c9a9;
+  .zarad-pillar {
+    padding: 0 12px;
   }
 
-  .promise-item:last-child {
-    border-bottom: 0;
+  .zarad-pillar:not(:last-child)::before,
+  .zarad-pillar:not(:last-child)::after {
+    display: none;
   }
-
-  .welcome-section {
+}
+.welcome-section {
     width: calc(100% - 44px);
     grid-template-columns: 1fr;
     gap: 52px;
