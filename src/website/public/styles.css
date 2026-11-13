@@ -248,14 +248,7 @@ button {
 }
 
 .hero::after {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  height: 4px;
-  background: linear-gradient(90deg, var(--gold), #f1cf91, var(--gold));
-  content: "";
+  content: none;
 }
 
 .hero-inner {
