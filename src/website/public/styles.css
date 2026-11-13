@@ -45,11 +45,29 @@ button {
 .site-header {
   position: relative;
   z-index: 5;
-  background: rgba(249, 241, 228, 0.97);
+  border-top: 4px solid #c9963b;
   border-bottom: 1px solid rgba(117, 30, 39, 0.12);
+  background-color: #f9f1e4;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23b88b3a' stroke-width='1' stroke-opacity='0.06'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3Ccircle cx='30' cy='30' r='12'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.site-header::after {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 6px;
+  background-color: #efe8da;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='6' viewBox='0 0 24 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6 L6 0 L12 6 L18 0 L24 6 Z' fill='%23c9963b' fill-opacity='0.55'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  content: "";
+  pointer-events: none;
 }
 
 .header-inner {
+  position: relative;
+  z-index: 2;
   width: min(1240px, calc(100% - 72px));
   min-height: 110px;
   margin: 0 auto;
@@ -60,10 +78,15 @@ button {
 }
 
 .brand {
-  width: 128px;
+  position: relative;
+  z-index: 2;
+  width: 152px;
+  padding: 4px 12px;
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
+  background: radial-gradient(circle, #f9f1e4 65%, transparent 100%);
+  border-radius: 8px;
 }
 
 .brand img {
@@ -109,26 +132,27 @@ button {
 }
 
 .language-toggle {
-  width: 38px;
-  height: 28px;
-  padding: 0;
-  border: 1px solid rgba(117, 30, 39, 0.24);
-  border-radius: 20px;
-  background: transparent;
-  color: #8b7568;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+  width: auto;
+  min-width: 38px;
+  height: auto;
+  min-height: 28px;
+  padding: 5px 14px;
+  border: 1px solid #c9963b;
+  border-radius: 999px;
+  background-color: #efe8da;
+  color: #4a3b2c;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   cursor: pointer;
-  opacity: 0.62;
-  transition: opacity 160ms ease, background 160ms ease, color 160ms ease;
+  transition: all 0.2s ease;
 }
 
 .language-toggle:hover,
 .language-toggle:focus-visible {
-  opacity: 1;
-  background: var(--wine);
-  color: #fff7e9;
+  border-color: #c9963b;
+  background-color: #c9963b;
+  color: #ffffff;
   outline: none;
 }
 
@@ -727,7 +751,7 @@ button {
   }
 
   .brand {
-    width: 128px;
+    width: 152px;
   }
 
   .brand img {
@@ -761,7 +785,7 @@ button {
   }
 
   .brand {
-    width: 128px;
+    width: 152px;
   }
 
   .brand img {
