@@ -45,21 +45,21 @@ button {
 .site-header {
   position: relative;
   z-index: 5;
-  border-top: 4px solid #c9963b;
-  border-bottom: 1px solid rgba(117, 30, 39, 0.12);
-  background-color: #f9f1e4;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23b88b3a' stroke-width='1' stroke-opacity='0.06'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3Ccircle cx='30' cy='30' r='12'/%3E%3C/g%3E%3C/svg%3E");
+  width: 100%;
+  border-top: 3px solid #c9963b;
+  background-color: #f7f3eb;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23b88b3a' stroke-width='1' stroke-opacity='0.05'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z'/%3E%3Ccircle cx='30' cy='30' r='12'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .site-header::after {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   right: 0;
   bottom: 0;
   left: 0;
-  height: 6px;
+  height: 5px;
   background-color: #efe8da;
-  background-image: url("data:image/svg+xml,%3Csvg width='24' height='6' viewBox='0 0 24 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6 L6 0 L12 6 L18 0 L24 6 Z' fill='%23c9963b' fill-opacity='0.55'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='5' viewBox='0 0 20 5' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5 L5 0 L10 5 L15 0 L20 5 Z' fill='%23c9963b' fill-opacity='0.55'/%3E%3C/svg%3E");
   background-repeat: repeat-x;
   content: "";
   pointer-events: none;
@@ -68,51 +68,47 @@ button {
 .header-inner {
   position: relative;
   z-index: 2;
-  width: min(1240px, calc(100% - 72px));
-  min-height: 110px;
-  margin: 0 auto;
-  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 10px 48px 14px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  gap: 36px;
 }
 
 .brand {
   position: relative;
   z-index: 2;
-  width: 152px;
-  padding: 4px 12px;
+  width: auto;
+  padding: 2px 10px;
   display: inline-flex;
   align-items: center;
-  flex-shrink: 0;
-  background: radial-gradient(circle, #f9f1e4 65%, transparent 100%);
+  justify-self: start;
+  background: radial-gradient(circle, #f7f3eb 65%, transparent 100%);
   border-radius: 8px;
 }
 
 .brand img {
   display: block;
-  width: 128px;
+  width: auto;
   max-width: 100%;
-  height: auto;
-  aspect-ratio: 1680 / 944;
+  height: 38px;
   object-fit: contain;
-  object-position: left center;
 }
 
 .main-nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: clamp(20px, 3vw, 43px);
-  flex: 1;
+  justify-self: center;
+  gap: 36px;
 }
 
 .nav-link {
   position: relative;
-  padding: 9px 0;
-  color: #65453a;
-  font-size: 13px;
-  font-weight: 600;
+  padding: 4px 0;
+  color: #5a2e22;
+  font-size: 14px;
+  font-weight: 500;
   transition: color 160ms ease;
 }
 
@@ -124,10 +120,10 @@ button {
 .nav-link.active::after {
   position: absolute;
   right: 0;
-  bottom: 1px;
+  bottom: -2px;
   left: 0;
   height: 2px;
-  background: var(--gold);
+  background: #c9963b;
   content: "";
 }
 
@@ -136,12 +132,13 @@ button {
   min-width: 38px;
   height: auto;
   min-height: 28px;
-  padding: 5px 14px;
+  padding: 4px 14px;
+  justify-self: end;
   border: 1px solid #c9963b;
   border-radius: 999px;
   background-color: #efe8da;
   color: #4a3b2c;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
   cursor: pointer;
@@ -745,17 +742,12 @@ button {
 
 @media (max-width: 900px) {
   .header-inner {
-    width: min(100% - 40px, 760px);
-    min-height: 110px;
-    gap: 20px;
-  }
-
-  .brand {
-    width: 152px;
+    width: 100%;
+    padding: 10px 28px 14px;
   }
 
   .brand img {
-    width: 128px;
+    height: 38px;
   }
 
   .main-nav {
@@ -777,30 +769,26 @@ button {
 
 @media (max-width: 680px) {
   .header-inner {
-    min-height: 78px;
-    height: auto;
-    flex-wrap: wrap;
-    gap: 10px 16px;
-    padding: 13px 0;
+    width: 100%;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "brand toggle" "nav nav";
+    gap: 8px 16px;
+    padding: 8px 18px 14px;
   }
 
   .brand {
-    width: 152px;
-  }
-
-  .brand img {
-    width: 128px;
-  }
-
-  .brand img {
-    height: auto;
+    grid-area: brand;
   }
 
   .main-nav {
-    order: 3;
+    grid-area: nav;
     width: 100%;
     justify-content: space-between;
     gap: 10px;
+  }
+
+  .language-toggle {
+    grid-area: toggle;
   }
 
   .nav-link {
