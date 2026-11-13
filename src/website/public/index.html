@@ -7,10 +7,24 @@
   <meta name="description" content="Zarad — One Spice Away. Arome inspirate de Maroc, pentru bucătăria ta.">
   <title>Zarad — One Spice Away</title>
   <link rel="icon" type="image/png" href="/assets/Zarad-logo.png?v=transparent-logo-20261113">
-  <link rel="stylesheet" href="/styles.css?v=feature-strip-thin-top-line-20261113">
-  <script src="/app.js?v=feature-strip-thin-top-line-20261113" defer></script>
+  <link rel="stylesheet" href="/styles.css?v=premium-moroccan-header-20261113">
+  <script src="/app.js?v=premium-moroccan-header-20261113" defer></script>
 </head>
 <body>
+  <div class="zarad-topbar">
+    <span class="zarad-topbar-message" data-ro="Arome inspirate de Maroc" data-en="Flavours inspired by Morocco">Arome inspirate de Maroc</span>
+    <div class="zarad-topbar-right">
+      <a class="zarad-topbar-contact" href="mailto:salut@zarad.ro">salut@zarad.ro</a>
+      <div class="zarad-lang-toggle">
+        <button class="language-toggle zarad-lang-pill is-ro" id="zarad_language" type="button" aria-label="Switch to English" title="English">
+          <span class="zarad-lang-slider" aria-hidden="true"></span>
+          <span class="zarad-lang-label label-ro" aria-hidden="true">RO</span>
+          <span class="zarad-lang-divider" aria-hidden="true"></span>
+          <span class="zarad-lang-label label-en" aria-hidden="true">EN</span>
+        </button>
+      </div>
+    </div>
+  </div>
   <header class="site-header zarad-header">
     <div class="header-inner">
       <a class="brand zarad-logo" href="/" aria-label="Zarad — One Spice Away">
@@ -22,15 +36,6 @@
         <a class="nav-link" href="/catalog" data-ro="Catalog" data-en="Catalogue">Catalog</a>
         <a class="nav-link" href="#contact" data-ro="Contact" data-en="Contact">Contact</a>
       </nav>
-
-      <div class="zarad-right">
-        <button class="language-toggle zarad-lang-pill is-ro" id="zarad_language" type="button" aria-label="Switch to English" title="English">
-          <span class="zarad-lang-slider" aria-hidden="true"></span>
-          <span class="zarad-lang-label label-ro" aria-hidden="true">RO</span>
-          <span class="zarad-lang-divider" aria-hidden="true"></span>
-          <span class="zarad-lang-label label-en" aria-hidden="true">EN</span>
-        </button>
-      </div>
     </div>
   </header>
 
@@ -130,7 +135,7 @@
           <span aria-hidden="true">→</span>
         </a>
       </div>
-      <div class="welcome-image">
+      <div class="welcome-image moroccan-arch-frame">
         <img src="/assets/spices/allspices-layedflat.JPG" alt="Selecție de condimente în nuanțe calde" loading="lazy">
         <span class="image-stamp">ONE SPICE AWAY</span>
       </div>
@@ -143,15 +148,15 @@
         <p data-ro="Explorează selecția Zarad și găsește inspirația pentru următoarea ta rețetă." data-en="Explore the Zarad selection and find inspiration for your next recipe.">Explorează selecția Zarad și găsește inspirația pentru următoarea ta rețetă.</p>
       </div>
       <div class="featured-spices">
-        <a class="featured-spice" href="/catalog">
+        <a class="featured-spice zarad-card zarad-card-arch" href="/catalog">
           <img src="/assets/spices/bean_spices.JPG" alt="Boabe de condimente" loading="lazy">
           <span data-ro="Arome întregi" data-en="Whole spices">Arome întregi</span>
         </a>
-        <a class="featured-spice" href="/catalog">
+        <a class="featured-spice zarad-card zarad-card-arch" href="/catalog">
           <img src="/assets/spices/grained_spice.JPG" alt="Condimente măcinate" loading="lazy">
           <span data-ro="Texturi fine" data-en="Fine textures">Texturi fine</span>
         </a>
-        <a class="featured-spice" href="/catalog">
+        <a class="featured-spice zarad-card zarad-card-arch" href="/catalog">
           <img src="/assets/spices/star_spice.JPG" alt="Mirodenii pentru bucătăria marocană" loading="lazy">
           <span data-ro="Note intense" data-en="Bold notes">Note intense</span>
         </a>
