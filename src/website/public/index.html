@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4ead9">
+  <meta name="description" content="Zarad — One Spice Away. Arome inspirate de Maroc, pentru bucătăria ta.">
+  <title>Zarad — One Spice Away</title>
+  <link rel="icon" type="image/png" href="/assets/Zarad-logo.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/" aria-label="Zarad — One Spice Away">
+        <img id="zarad_logo" src="/assets/Zarad-logo.png" alt="Zarad — One Spice Away" width="128" height="72">
+      </a>
+
+      <nav class="main-nav" aria-label="Navigare principală">
+        <a class="nav-link active" href="/" aria-current="page" data-ro="Acasă" data-en="Home">Acasă</a>
+        <a class="nav-link" href="/catalog" data-ro="Catalog" data-en="Catalogue">Catalog</a>
+        <a class="nav-link" href="#contact" data-ro="Contact" data-en="Contact">Contact</a>
+      </nav>
+
+      <button class="language-toggle" id="zarad_language" type="button" aria-label="Switch to English" title="English">EN</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Zarad — One Spice Away">
+      <div class="hero-slider" id="zarad_slider">
+        <div class="hero-slides">
+          <div class="hero-slide is-active">
+            <img src="/assets/people/homepage_frame_main.JPG" alt="Universul Zarad și aromele condimentelor" fetchpriority="high">
+          </div>
+          <div class="hero-slide">
+            <img data-src="/assets/people/homepage_frame_lighted_spices.JPG" alt="Condimente Zarad puse în valoare de lumină" loading="lazy">
+          </div>
+          <div class="hero-slide">
+            <img data-src="/assets/people/focused_spice1.JPG" alt="Detaliu din universul condimentelor Zarad" loading="lazy">
+          </div>
+          <div class="hero-slide">
+            <img data-src="/assets/people/focus_spice1_spoon.JPG" alt="Un moment de pregătire cu mirodenii" loading="lazy">
+          </div>
+        </div>
+        <div class="hero-shade"></div>
+
+        <div class="hero-inner">
+          <p class="eyebrow hero-eyebrow">
+            <span class="eyebrow-line"></span>
+            <span data-ro="INSPIRAT DE AROMELE MAROCULUI" data-en="INSPIRED BY THE FLAVOURS OF MOROCCO">INSPIRAT DE AROMELE MAROCULUI</span>
+          </p>
+          <h1>One Spice Away</h1>
+          <p class="hero-description" data-ro="Descoperă o lume de arome, culori și inspirație. Adu spiritul bucătăriei marocane mai aproape de fiecare masă." data-en="Discover a world of aromas, colours and inspiration. Bring the spirit of Moroccan cooking a little closer to every meal.">Descoperă o lume de arome, culori și inspirație. Adu spiritul bucătăriei marocane mai aproape de fiecare masă.</p>
+          <a class="primary-button" href="/catalog">
+            <span data-ro="Explorează catalogul" data-en="Explore the catalogue">Explorează catalogul</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="hero-caption">
+          <span id="zarad_slide_caption" data-ro="CULORI ȘI AROME CU PERSONALITATE" data-en="COLOURFUL FLAVOURS WITH CHARACTER">CULORI ȘI AROME CU PERSONALITATE</span>
+          <span class="caption-symbol">✳</span>
+        </div>
+
+        <div class="slider-controls">
+          <button class="slider-arrow" id="zarad_previous" type="button" aria-label="Imaginea anterioară">←</button>
+          <div class="slider-dots" id="zarad_slider_dots" aria-label="Alege imaginea">
+            <button class="slider-dot is-active" type="button" aria-label="Imaginea 1" aria-current="true"></button>
+            <button class="slider-dot" type="button" aria-label="Imaginea 2"></button>
+            <button class="slider-dot" type="button" aria-label="Imaginea 3"></button>
+            <button class="slider-dot" type="button" aria-label="Imaginea 4"></button>
+          </div>
+          <button class="slider-arrow" id="zarad_next" type="button" aria-label="Imaginea următoare">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise-strip" aria-label="Zarad">
+      <div class="promise-item">
+        <span class="promise-icon">✳</span>
+        <div>
+          <strong data-ro="Arome memorabile" data-en="Memorable flavours">Arome memorabile</strong>
+          <span data-ro="Pentru mese cu personalitate" data-en="For food with character">Pentru mese cu personalitate</span>
+        </div>
+      </div>
+      <div class="promise-item">
+        <span class="promise-icon">❋</span>
+        <div>
+          <strong data-ro="Spirit marocan" data-en="Moroccan spirit">Spirit marocan</strong>
+          <span data-ro="Inspirație dintr-o cultură bogată" data-en="Inspired by a rich culture">Inspirație dintr-o cultură bogată</span>
+        </div>
+      </div>
+      <div class="promise-item">
+        <span class="promise-icon">✺</span>
+        <div>
+          <strong data-ro="Bucurie în bucătărie" data-en="Joy in the kitchen">Bucurie în bucătărie</strong>
+          <span data-ro="Idei noi pentru preparatele tale" data-en="Fresh ideas for your dishes">Idei noi pentru preparatele tale</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="welcome-section">
+      <div class="welcome-copy">
+        <p class="section-kicker" data-ro="BUN VENIT ÎN LUMEA ZARAD" data-en="WELCOME TO THE WORLD OF ZARAD">BUN VENIT ÎN LUMEA ZARAD</p>
+        <h2 data-ro="Puțină curiozitate. Multă savoare." data-en="A little curiosity. A lot of flavour.">Puțină curiozitate. Multă savoare.</h2>
+        <p data-ro="Ne inspirăm din piețele vibrante ale Marocului, din culorile condimentelor și din bucuria de a descoperi gusturi noi. Zarad aduce această inspirație mai aproape de bucătăria ta." data-en="We take inspiration from Morocco's vibrant markets, the colours of spices and the joy of discovering new tastes. Zarad brings that inspiration closer to your kitchen.">Ne inspirăm din piețele vibrante ale Marocului, din culorile condimentelor și din bucuria de a descoperi gusturi noi. Zarad aduce această inspirație mai aproape de bucătăria ta.</p>
+        <a class="text-link" href="/catalog">
+          <span data-ro="Vezi selecția Zarad" data-en="See the Zarad selection">Vezi selecția Zarad</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <div class="welcome-image">
+        <img src="/assets/spices/allspices-layedflat.JPG" alt="Selecție de condimente în nuanțe calde" loading="lazy">
+        <span class="image-stamp">ONE SPICE AWAY</span>
+      </div>
+    </section>
+
+    <section class="spice-section">
+      <div class="section-heading">
+        <p class="section-kicker" data-ro="DESCOPERĂ UNIVERSUL CONDIMENTELOR" data-en="DISCOVER THE WORLD OF SPICES">DESCOPERĂ UNIVERSUL CONDIMENTELOR</p>
+        <h2 data-ro="Fiecare aromă deschide o nouă poveste." data-en="Every flavour opens a new story.">Fiecare aromă deschide o nouă poveste.</h2>
+        <p data-ro="Explorează selecția Zarad și găsește inspirația pentru următoarea ta rețetă." data-en="Explore the Zarad selection and find inspiration for your next recipe.">Explorează selecția Zarad și găsește inspirația pentru următoarea ta rețetă.</p>
+      </div>
+      <div class="featured-spices">
+        <a class="featured-spice" href="/catalog">
+          <img src="/assets/spices/bean_spices.JPG" alt="Boabe de condimente" loading="lazy">
+          <span data-ro="Arome întregi" data-en="Whole spices">Arome întregi</span>
+        </a>
+        <a class="featured-spice" href="/catalog">
+          <img src="/assets/spices/grained_spice.JPG" alt="Condimente măcinate" loading="lazy">
+          <span data-ro="Texturi fine" data-en="Fine textures">Texturi fine</span>
+        </a>
+        <a class="featured-spice" href="/catalog">
+          <img src="/assets/spices/star_spice.JPG" alt="Mirodenii pentru bucătăria marocană" loading="lazy">
+          <span data-ro="Note intense" data-en="Bold notes">Note intense</span>
+        </a>
+      </div>
+      <div class="catalog-link-wrap">
+        <a class="primary-button" href="/catalog">
+          <span data-ro="Descoperă catalogul" data-en="Discover the catalogue">Descoperă catalogul</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="closing-banner">
+      <div>
+        <p class="section-kicker">ONE SPICE AWAY</p>
+        <h2 data-ro="Alege aroma care îți inspiră următoarea aventură culinară." data-en="Find the flavour that inspires your next culinary adventure.">Alege aroma care îți inspiră următoarea aventură culinară.</h2>
+      </div>
+      <a class="primary-button primary-button-light" href="/catalog">
+        <span data-ro="Vezi catalogul" data-en="View the catalogue">Vezi catalogul</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <a class="footer-brand" href="/" aria-label="Zarad — One Spice Away">
+      <img src="/assets/Zarad-logo.png" alt="Zarad">
+    </a>
+    <p>One Spice Away</p>
+    <a class="footer-contact" href="mailto:salut@zarad.ro">salut@zarad.ro</a>
+    <span class="footer-copy">© <span id="current-year"></span> Zarad</span>
+  </footer>
+</body>
+</html>

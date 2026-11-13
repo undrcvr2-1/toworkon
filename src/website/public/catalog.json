@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Boabe aromate",
+    "image": "bean_spices.JPG",
+    "folder": "spices",
+    "description": "Boabe întregi, cu textură și caracter, potrivite pentru a adăuga profunzime preparatelor tale.",
+    "name_en": "Aromatic seeds",
+    "description_en": "Whole spices with texture and character, ideal for adding depth to your dishes."
+  },
+  {
+    "name": "Condimente măcinate",
+    "image": "grained_spice.JPG",
+    "folder": "spices",
+    "description": "Texturi fine și arome concentrate, ușor de integrat în rețete de zi cu zi sau preparate speciale.",
+    "name_en": "Ground spices",
+    "description_en": "Fine textures and concentrated flavours, easy to add to everyday recipes or special dishes."
+  },
+  {
+    "name": "Amestecul Zarad",
+    "image": "main_spice_frame.JPG",
+    "folder": "spices",
+    "description": "Un amestec inspirat de combinațiile îndrăznețe din bucătăria marocană, creat pentru mese pline de personalitate.",
+    "name_en": "The Zarad blend",
+    "description_en": "A blend inspired by the bold combinations of Moroccan cooking, made for meals with character."
+  },
+  {
+    "name": "Nuanțe calde",
+    "image": "nut_spice.JPG",
+    "folder": "spices",
+    "description": "O selecție cu note calde și parfumate, potrivită pentru rețete care aduc oamenii împreună.",
+    "name_en": "Warm notes",
+    "description_en": "A selection of warm, fragrant notes for recipes that bring people together."
+  },
+  {
+    "name": "Amestec roșcat",
+    "image": "reddish_brown_spice.jpg",
+    "folder": "spices",
+    "description": "O combinație cu nuanțe intense, pentru preparate în care culoarea și savoarea merg mână în mână.",
+    "name_en": "Warm-toned blend",
+    "description_en": "A richly coloured blend for dishes where colour and flavour go hand in hand."
+  },
+  {
+    "name": "Mirodenii întregi",
+    "image": "star_spice.JPG",
+    "folder": "spices",
+    "description": "Mirodenii care își dezvăluie treptat parfumul și adaugă un accent aparte preparatelor.",
+    "name_en": "Whole aromatics",
+    "description_en": "Aromatic spices that gradually release their fragrance and bring a distinctive touch to dishes."
+  },
+  {
+    "name": "Selecția marocană",
+    "image": "allspices-frame.JPG",
+    "folder": "spices",
+    "description": "O privire asupra universului de culori și texturi care inspiră colecția Zarad.",
+    "name_en": "The Moroccan selection",
+    "description_en": "A glimpse into the world of colours and textures that inspires the Zarad collection."
+  },
+  {
+    "name": "Paleta condimentelor",
+    "image": "allspices-layedflat.JPG",
+    "folder": "spices",
+    "description": "O colecție vizuală de arome și nuanțe, pentru cei care iubesc să experimenteze în bucătărie.",
+    "name_en": "The spice palette",
+    "description_en": "A visual collection of flavours and colours for those who love to experiment in the kitchen."
+  },
+  {
+    "name": "Mix de mirodenii",
+    "image": "seashell_spicefar.JPG",
+    "folder": "spices",
+    "description": "Un alt fel de inspirație pentru rețetele tale, cu un profil aromatic ce merită descoperit.",
+    "name_en": "Spice mix",
+    "description_en": "Another source of inspiration for your recipes, with an aromatic profile worth discovering."
+  }
+]
