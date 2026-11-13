@@ -1228,3 +1228,129 @@ width: calc(100% - 44px);
   border-top: 1px solid rgba(201, 150, 59, 0.65);
   border-bottom: 1px solid rgba(201, 150, 59, 0.65);
 }
+
+/* Moroccan olive call-to-action section */
+.zarad-cta-section {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #344636;
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(74, 99, 76, 0.72) 0%, rgba(34, 47, 36, 0.94) 100%),
+    url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d4a443' stroke-width='0.9' stroke-opacity='0.09'%3E%3Cpath d='M24 0L48 24L24 48L0 24Z'/%3E%3Cpolygon points='24,8 28,20 40,24 28,28 24,40 20,28 8,24 20,20'/%3E%3Ccircle cx='24' cy='24' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  border-top: 2px solid #c9963b;
+  border-bottom: 2px solid #c9963b;
+}
+
+.zarad-cta-frieze {
+  width: 100%;
+  height: 14px;
+  background-color: rgba(24, 34, 25, 0.45);
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='14' viewBox='0 0 28 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d4a443' stroke-width='1' stroke-opacity='0.7'%3E%3Cpath d='M0 7 L7 0 L14 7 L7 14 Z M14 7 L21 0 L28 7 L21 14 Z'/%3E%3Ccircle cx='7' cy='7' r='1.8' fill='%23d4a443' fill-opacity='0.55'/%3E%3Ccircle cx='21' cy='7' r='1.8' fill='%23d4a443' fill-opacity='0.55'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.zarad-cta-frieze-top { border-bottom: 1px solid rgba(212, 164, 67, 0.4); }
+.zarad-cta-frieze-bottom { border-top: 1px solid rgba(212, 164, 67, 0.4); }
+
+.zarad-cta-frame {
+  position: relative;
+  width: min(1060px, calc(100% - 44px));
+  margin: 22px auto;
+  padding: 48px 36px;
+  border: 1px solid rgba(212, 164, 67, 0.38);
+  box-shadow: inset 0 0 0 5px rgba(52, 70, 54, 0.4), inset 0 0 0 6px rgba(212, 164, 67, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.zarad-cta-corner {
+  position: absolute;
+  color: #d4a443;
+  font-size: 12px;
+  line-height: 1;
+  opacity: 0.85;
+}
+.zarad-cta-corner.tl { top: 8px; left: 10px; }
+.zarad-cta-corner.tr { top: 8px; right: 10px; }
+.zarad-cta-corner.bl { bottom: 8px; left: 10px; }
+.zarad-cta-corner.br { bottom: 8px; right: 10px; }
+
+.zarad-cta-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 14px;
+  color: #e6be6a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.zarad-cta-kicker::before,
+.zarad-cta-kicker::after {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d4a443);
+}
+.zarad-cta-kicker::after { background: linear-gradient(to left, transparent, #d4a443); }
+
+.zarad-cta-heading {
+  max-width: 640px;
+  margin: 0 auto 14px;
+  color: #faf7f0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.24;
+  letter-spacing: -0.01em;
+}
+
+.zarad-cta-ornament {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 26px;
+  color: #d4a443;
+  font-size: 13px;
+}
+.zarad-cta-ornament .line {
+  width: 64px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(212, 164, 67, 0.7), transparent);
+}
+
+.zarad-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 34px;
+  background-color: #f6eedc;
+  color: #2c3b2e;
+  border: 1.5px solid #d4a443;
+  box-shadow: 0 10px 26px rgba(15, 22, 16, 0.28), inset 0 0 0 3px #f6eedc, inset 0 0 0 4px rgba(201, 150, 59, 0.5);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.zarad-cta-button:hover {
+  background-color: #e6be6a;
+  color: #1f2b20;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(15, 22, 16, 0.38), inset 0 0 0 3px #e6be6a, inset 0 0 0 4px rgba(44, 59, 46, 0.35);
+}
+.zarad-cta-button .arrow { transition: transform 0.25s ease; }
+.zarad-cta-button:hover .arrow { transform: translate(3px, -2px); }
+.zarad-cta-button:focus-visible { outline: 2px solid #faf7f0; outline-offset: 4px; }
+
+@media (max-width: 768px) {
+  .zarad-cta-frame { margin: 16px auto; padding: 36px 20px; }
+  .zarad-cta-heading { font-size: 28px; }
+}
