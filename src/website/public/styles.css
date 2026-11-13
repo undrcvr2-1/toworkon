@@ -398,7 +398,7 @@ button {
   width: 100%;
   margin: 0;
   flex-direction: column;
-  border-top: 0;
+  border-top: 1px solid #c9963b;
   border-bottom: 2px solid #c9963b;
   background-color: #faf7f0;
   box-sizing: border-box;
